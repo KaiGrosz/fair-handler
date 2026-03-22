@@ -1,0 +1,63 @@
+name: Bug Report
+description: Report a bug to help us improve
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a bug! Please fill out the sections below.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Add a FAIR repository to composer.json
+        2. Run `composer update`
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened. Include error messages if applicable.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low (cosmetic, minor inconvenience)
+        - Medium (feature partially broken)
+        - High (feature completely broken)
+        - Critical (security issue, data loss)
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide the following details.
+      placeholder: |
+        - PHP version: 8.2.x
+        - Composer version: 2.7.x
+        - OS: Ubuntu 24.04 / macOS 15 / Windows 11
+        - Plugin version: x.x.x
+    validations:
+      required: true
